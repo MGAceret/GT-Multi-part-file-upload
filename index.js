@@ -6,6 +6,7 @@ import postRoutes from './src/routes/post.routes.js';
 import userRoutes from './src/routes/user.routes.js';
 import commentRoutes from './src/routes/comment.routes.js';
 import authRoutes from './src/routes/auth.routes.js';
+import photoRoutes from './src/routes/photo.routes.js';
 import { testConnection } from './src/config/db.js'; 
 import { errorHandler } from './src/middleware/errorHandler.middleware.js';
 
@@ -27,7 +28,7 @@ app.use('/api/users', userRoutes);
 // Mount the comments routes
 app.use('/api', commentRoutes);
 // Mount the photo routes
-app.use('/api/photos', photoRoutes)
+app.use('/api/photos', photoRoutes);
 
 app.use(errorHandler);
 
