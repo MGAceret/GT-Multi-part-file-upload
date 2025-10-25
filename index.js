@@ -14,6 +14,9 @@ const port = 3000;
 
 app.use(express.json());
 
+// Making 'uploads' accessible
+app.use('/uploads', express.static('uploads'));
+
 // Mount the authorized users
 app.use('/api/auth', authRoutes)
 
@@ -23,6 +26,8 @@ app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
 // Mount the comments routes
 app.use('/api', commentRoutes);
+// Mount the photo routes
+app.use('/api/photos', photoRoutes)
 
 app.use(errorHandler);
 
