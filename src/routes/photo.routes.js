@@ -1,8 +1,8 @@
 // src/routes/photo.routes.js
 import { Router } from 'express';
 import * as photoController from '../controllers/photo.controller.js';
-import { authMiddleware } from '../middlewares/auth.middleware.js';
-import upload from '../middlewares/multer.middleware.js';
+import { authMiddleware } from '../middleware/auth.middleware.js';
+import upload from '../middleware/multer.middleware.js';
 
 const router = Router();
 
